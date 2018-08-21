@@ -37,13 +37,10 @@ module.exports = async (client, message) => {
   const cmd = client.commands.get(command)
 
   // And in case it doesn't exist just bail out~
-  if (!cmd) return
-
-  // Check permission level
-  if (cmd.conf.perm > client.tools.permCheck(message.member)) return message.channel.send(`**You need permission level \`${client.config.permLvls[cmd.conf.perm].name}\` to use this**`)
+  if (!cmd) return 
 
   // Bail out if the command is disabled in it's configuration (maybe strap this to a database at some point so to can be remotely toggled?)
-  if (cmd.conf.enabled === false) return message.channel.send(`**This command is disabled**`)
+  
 
   // And if all goes well, run the command
   await cmd.run(client, message, args)
