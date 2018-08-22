@@ -58,8 +58,8 @@ exports.run = (client, message, args) => {
 
   // Format help menu to fancy embed
   const embed = new Discord.RichEmbed()
-    .setAuthor('Hey, I am Oofbot.')
-    .setDescription(`A bot by\n\`Snow#6929\`\n\n**${prefix}help (command) for more info**`)
+    .setAuthor("Hey, I'm Oofbot.")
+    .setDescription(`A bot by \`Snow#6929\`\n**${prefix}help (command) for more info**`)
     .addField('Fun', fun.sort().join('\n'), true)
     .addField('Utility', util.sort().join('\n'), true)
     .addBlankField()
