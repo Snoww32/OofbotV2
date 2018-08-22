@@ -18,3 +18,9 @@ exports.run = async (client, message, args) => {
 
     message.channel.send(embed);
 };
+exports.help = {
+    name: 'sixnumbers',
+    description: 'Finds a ncomic based on sixnumbers',
+    usage: '[1-6 numbers]',
+    category: "fun"
+  }
